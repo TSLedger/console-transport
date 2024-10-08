@@ -1,7 +1,7 @@
-import type { LedgerTransportOptions, TransportHandleMessage } from '../ledger/lib/interface/struct.ts';
-import { LedgerTransport } from '../ledger/lib/transport.ts';
-import { format } from '@std/datetime/format';
-import * as colors from '@std/fmt/colors';
+import type { LedgerTransportOptions, TransportHandleMessage } from './deps.ts';
+import { LedgerTransport } from './deps.ts';
+import { format } from './deps.ts';
+import { colors } from './deps.ts';
 
 export class Transport extends LedgerTransport {
   public constructor(options: LedgerTransportOptions) {

@@ -5,6 +5,7 @@
       "jsr:@cm-iv/queue@^1.0.0": "jsr:@cm-iv/queue@1.0.0",
       "jsr:@denostack/superserial@^0.3.5": "jsr:@denostack/superserial@0.3.5",
       "jsr:@std/datetime@^0.225.2": "jsr:@std/datetime@0.225.2",
+      "jsr:@std/fmt": "jsr:@std/fmt@1.0.2",
       "jsr:@std/fmt@^1.0.2": "jsr:@std/fmt@1.0.2"
     },
     "jsr": {
@@ -22,7 +23,9 @@
       }
     }
   },
-  "remote": {},
+  "remote": {
+    "https://raw.githubusercontent.com/TSLedger/ledger/refs/heads/main/lib/transport.ts": "e4e3899452edbba0a9487bc90faf823825c11ead9fed6f5992f0b10fefaa27e8"
+  },
   "workspace": {
     "dependencies": [
       "jsr:@cm-iv/queue@^1.0.0",
