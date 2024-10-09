@@ -43,7 +43,6 @@ export class Transport extends LedgerTransport {
 
     // Arguments
     const args = serialize(payload.args);
-    console.info('a', args);
     if (args.trim() !== '[]') {
       print = print + ' %s';
       printf(`${print}\n`, timestamp, level, message, args);
