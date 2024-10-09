@@ -69,7 +69,5 @@
     "semiColons": true,
     "singleQuote": true,
     "proseWrap": "always"
-  },
-  // Import Mapping
-  "imports": { "@cm-iv/queue": "jsr:@cm-iv/queue@^1.0.0", "@denostack/superserial": "jsr:@denostack/superserial@^0.3.5", "@std/datetime": "jsr:@std/datetime@^0.225.2", "@std/fmt": "jsr:@std/fmt@^1.0.2" }
+  }
 }

@@ -3,29 +3,17 @@
   "packages": {
     "specifiers": {
       "jsr:@adllang/jsonbinding": "jsr:@adllang/jsonbinding@0.2.1",
-      "jsr:@cm-iv/queue@^1.0.0": "jsr:@cm-iv/queue@1.0.0",
-      "jsr:@denostack/superserial@0.3.5": "jsr:@denostack/superserial@0.3.5",
-      "jsr:@denostack/superserial@^0.3.5": "jsr:@denostack/superserial@0.3.5",
-      "jsr:@std/datetime": "jsr:@std/datetime@0.225.2",
       "jsr:@std/datetime@0.225.2": "jsr:@std/datetime@0.225.2",
-      "jsr:@std/datetime@^0.225.2": "jsr:@std/datetime@0.225.2",
-      "jsr:@std/fmt": "jsr:@std/fmt@1.0.2",
       "jsr:@std/fmt@1.0.2": "jsr:@std/fmt@1.0.2",
-      "jsr:@std/fmt@^1.0.2": "jsr:@std/fmt@1.0.2",
       "jsr:@workers/v8-value-serializer": "jsr:@workers/v8-value-serializer@0.5.4",
       "jsr:@workers/v8-value-serializer-core@^0.1.15": "jsr:@workers/v8-value-serializer-core@0.1.15",
       "jsr:@workers/v8-value-serializer@0.5": "jsr:@workers/v8-value-serializer@0.5.4",
-      "jsr:@workers/v8-value-serializer@0.5.4": "jsr:@workers/v8-value-serializer@0.5.4"
+      "jsr:@workers/v8-value-serializer@0.5.4": "jsr:@workers/v8-value-serializer@0.5.4",
+      "npm:string.ify": "npm:string.ify@1.0.64"
     },
     "jsr": {
       "@adllang/jsonbinding@0.2.1": {
         "integrity": "9806d112a87c07bdbbbba0264dd81cea6f238fad1f14a1283dafac46ee2f3e5e"
-      },
-      "@cm-iv/queue@1.0.0": {
-        "integrity": "0dc1da37987077e765240a73f7164196fca065ce585fcb542f8db50831078f0a"
-      },
-      "@denostack/superserial@0.3.5": {
-        "integrity": "081019681862c8ae32dc8d754824ef967aa1f69138c7792517bf12163250aa08"
       },
       "@std/datetime@0.225.2": {
         "integrity": "45f0100554a912cd65f48089ef0a33aa1eb6ea21f08090840b539ab582827eaa"
@@ -41,6 +29,25 @@
         "dependencies": [
           "jsr:@workers/v8-value-serializer-core@^0.1.15"
         ]
+      }
+    },
+    "npm": {
+      "printable-characters@1.0.42": {
+        "integrity": "sha512-dKp+C4iXWK4vVYZmYSd0KBH5F/h1HoZRsbJ82AVKRO3PEo8L4lBS/vLwhVtpwwuYcoIsVY+1JYKR268yn480uQ==",
+        "dependencies": {}
+      },
+      "string.bullet@1.0.12": {
+        "integrity": "sha512-6+tQyad/ux52N+7wUcjmxeK5TfdeykBBLHQPk8MxUVrk9JwHzJnuxsJzjjpWAuz0x3EmnVGCg0ibMHqez1l/qQ==",
+        "dependencies": {
+          "printable-characters": "printable-characters@1.0.42"
+        }
+      },
+      "string.ify@1.0.64": {
+        "integrity": "sha512-4Aa5yndnuOhE1GV2W3ht4rQ08XHq46JLXmSOv0jeUWEzqliBvm8lAXvt+66np+J9DkoCZikFzTzjXVLRR0F/Xw==",
+        "dependencies": {
+          "printable-characters": "printable-characters@1.0.42",
+          "string.bullet": "string.bullet@1.0.12"
+        }
       }
     }
   },
@@ -408,13 +415,5 @@
     "https://raw.githubusercontent.com/TSLedger/ledger/refs/heads/main/lib/interface/op.ts": "a0b0da1ad7ac19d80e13b746bdb7878703dfd81724a09cb0f5e380f3846b66f6",
     "https://raw.githubusercontent.com/TSLedger/ledger/refs/heads/main/lib/interface/struct.ts": "10561ca7580aaedb628614d3af61a1185efdf92c8f263bb426ed542225747526",
     "https://raw.githubusercontent.com/TSLedger/ledger/refs/heads/main/lib/transport.ts": "e4e3899452edbba0a9487bc90faf823825c11ead9fed6f5992f0b10fefaa27e8"
-  },
-  "workspace": {
-    "dependencies": [
-      "jsr:@cm-iv/queue@^1.0.0",
-      "jsr:@denostack/superserial@^0.3.5",
-      "jsr:@std/datetime@^0.225.2",
-      "jsr:@std/fmt@^1.0.2"
-    ]
   }
 }

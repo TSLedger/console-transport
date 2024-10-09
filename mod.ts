@@ -1,7 +1,8 @@
 import type { LedgerTransportOptions, TransportHandleMessage } from './deps.ts';
-import { LedgerTransport, Level, printf, serialize } from './deps.ts';
+import { LedgerTransport, Level, printf } from './deps.ts';
 import { format } from './deps.ts';
 import { colors } from './deps.ts';
+import { serialize } from './util/stringify.ts';
 
 export class Transport extends LedgerTransport {
   public constructor(options: LedgerTransportOptions) {
@@ -41,8 +42,13 @@ export class Transport extends LedgerTransport {
     const message = colors.cyan(payload.message);
 
     // Arguments
-    const args = serialize(payload.args, 2);
-    if (args.trim() !== '[]') print = print + ' %s';
-    printf(`${print}\n`, timestamp, level, message, args);
+    const args = serialize(payload.args);
+    console.info('a', args);
+    if (args.trim() !== '[]') {
+      print = print + ' %s';
+      printf(`${print}\n`, timestamp, level, message, args);
+    } else {
+      printf(`${print}\n`, timestamp, level, message);
+    }
   }
 }
