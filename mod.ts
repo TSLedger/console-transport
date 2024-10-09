@@ -7,7 +7,6 @@ import { serialize } from './util/stringify.ts';
 export class Transport extends LedgerTransport {
   public constructor(options: LedgerTransportOptions) {
     super(options);
-    if (this.options.colorize === undefined) this.options.colorize = true;
   }
 
   public override async consume(payload: TransportHandleMessage): Promise<void> {
