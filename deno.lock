@@ -9,7 +9,8 @@
       "npm:string.ify": "npm:string.ify@1.0.64",
       "npm:string.ify@0": "npm:string.ify@0.0.1",
       "npm:string.ify@1.0.5": "npm:string.ify@1.0.5",
-      "npm:string.ify@1.0.6": "npm:string.ify@1.0.6"
+      "npm:string.ify@1.0.6": "npm:string.ify@1.0.6",
+      "npm:string.ify@1.0.64": "npm:string.ify@1.0.64"
     },
     "jsr": {
       "@ledger/ledger@0.0.2": {
