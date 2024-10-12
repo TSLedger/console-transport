@@ -9,7 +9,8 @@ export class Transport extends LedgerTransport {
     super(options);
   }
 
-  public async consume(payload: TransportHandleMessage): Promise<void> {
+  // deno-lint-ignore require-await
+  public override async consume(payload: TransportHandleMessage): Promise<void> {
     // printf
     let print = '%s %s: %s';
 
