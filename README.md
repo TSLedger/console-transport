@@ -19,4 +19,5 @@ ledger.info('Hello, world.', { how: "are you?" });
 
 ### Attributions
 
-Deno/JSr @std https://jsr.io/@std string.ify https://www.npmjs.com/package/string.ify
+- Deno/JSR @std https://jsr.io/@std
+- string.ify https://www.npmjs.com/package/string.ify
