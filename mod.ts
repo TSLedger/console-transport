@@ -1,25 +1,20 @@
-import type { LedgerTransportOptions, TransportHandleMessage } from './deps.ts';
-import { LedgerTransport, Level, printf } from './deps.ts';
-import { format } from './deps.ts';
+import type { PageMessageContext } from './deps.ts';
+import { format, Level, Page, printf } from './deps.ts';
 import { colors } from './deps.ts';
 import { serialize } from './util/stringify.ts';
 
-export class Transport extends LedgerTransport {
-  public constructor(options: LedgerTransportOptions) {
-    super(options);
-  }
-
+class Transport extends Page {
   // deno-lint-ignore require-await
-  public override async consume(payload: TransportHandleMessage): Promise<void> {
+  public override async receive({ context }: PageMessageContext): Promise<void> {
     // printf
     let print = '%s %s: %s';
 
     // Timestamp
-    const timestamp = `${colors.gray('[')}${colors.white(format(payload.date, 'yyyy-MM-dd HH:mm:ss.SSS'))}${colors.gray(']')}`;
+    const timestamp = `${colors.gray('[')}${colors.white(format(context.date, 'yyyy-MM-dd HH:mm:ss.SSS'))}${colors.gray(']')}`;
 
     // Level
-    let level = Level[payload.level];
-    switch (payload.level) {
+    let level = Level[context.level];
+    switch (context.level) {
       case Level.TRACE: {
         level = `${colors.brightCyan(level)}`;
         break;
@@ -39,10 +34,10 @@ export class Transport extends LedgerTransport {
     }
 
     // Message
-    const message = colors.cyan(payload.message);
+    const message = colors.cyan(context.message);
 
     // Arguments
-    const args = serialize(payload.args);
+    const args = serialize(context.args);
     if (args.trim() !== '[]') {
       print = print + ' %s';
       printf(`${print}\n`, timestamp, level, message, args);
@@ -51,3 +46,5 @@ export class Transport extends LedgerTransport {
     }
   }
 }
+
+new Transport();

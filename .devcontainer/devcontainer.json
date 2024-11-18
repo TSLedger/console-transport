@@ -1,0 +1,40 @@
+{
+    "name": "Deno",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.hotExit": "onExitAndWindowClose",
+                "files.insertFinalNewline": true,
+                "files.trimFinalNewlines": true,
+                "[typescript]": {
+                    "editor.defaultFormatter": "denoland.vscode-deno"
+                },
+                "[javascript]": {
+                    "editor.defaultFormatter": null
+                },
+                "[json]": {
+                    "editor.defaultFormatter": "vscode.json-language-features"
+                },
+                "[jsonc]": {
+                    "editor.defaultFormatter": "vscode.json-language-features"
+                },
+                "deno.enable": true,
+                "extensions.webWorker": true,
+                "extensions.ignoreRecommendations": true
+            },
+            "extensions": [
+                // Editor
+                "editorconfig.editorconfig",
+                // Language
+                "justjavac.vscode-deno-extensionpack",
+                // IntelliCode
+                "VisualStudioExptTeam.vscodeintellicode",
+                "VisualStudioExptTeam.vscodeintellicode-completions",
+                "VisualStudioExptTeam.intellicode-api-usage-examples"
+            ]
+        }
+    }
+}
