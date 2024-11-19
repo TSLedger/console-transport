@@ -1,11 +1,11 @@
-import type { PageMessageContext } from './deps.ts';
-import { format, Level, Page, printf } from './deps.ts';
+import type { PageHandler, PageMessageContext } from './deps.ts';
+import { format, Level, printf } from './deps.ts';
 import { colors } from './deps.ts';
 import { serialize } from './util/stringify.ts';
 
-class Transport extends Page {
+export class Page implements PageHandler {
   // deno-lint-ignore require-await
-  public override async receive({ context }: PageMessageContext): Promise<void> {
+  public async receive({ context }: PageMessageContext): Promise<void> {
     // printf
     let print = '%s %s: %s';
 
@@ -46,5 +46,3 @@ class Transport extends Page {
     }
   }
 }
-
-new Transport();

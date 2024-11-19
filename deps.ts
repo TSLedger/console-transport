@@ -1,6 +1,6 @@
 // Ledger
-export { Level, Page } from 'jsr:@ledger/ledger@0.0.7';
-export type { PageMessageContext, PageOptions } from 'jsr:@ledger/ledger@0.0.7';
+export { Level } from 'jsr:@ledger/ledger@0.0.9';
+export type { PageHandler, PageMessageContext, PageOptions } from 'jsr:@ledger/ledger@0.0.9';
 
 // External
 export { format } from 'jsr:@std/datetime@0.225.2/format';
