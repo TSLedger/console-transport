@@ -4,6 +4,10 @@ import { colors } from './deps.ts';
 import { serialize } from './util/stringify.ts';
 
 export class Page implements PageHandler {
+  public constructor() {
+    console.info('initialize recv');
+  }
+
   // deno-lint-ignore require-await
   public async receive({ context }: PageMessageContext): Promise<void> {
     // printf
