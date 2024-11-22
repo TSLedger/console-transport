@@ -30,6 +30,13 @@
         "jsr:@jotsr/delayed"
       ]
     },
+    "@ledger/ledger@0.0.11": {
+      "integrity": "002d6ab4adaad103795dd4545d2528dd685f964221d94464af1ef626033aa6ba",
+      "dependencies": [
+        "jsr:@cm-iv/queue",
+        "jsr:@jotsr/delayed"
+      ]
+    },
     "@std/datetime@0.225.2": {
       "integrity": "45f0100554a912cd65f48089ef0a33aa1eb6ea21f08090840b539ab582827eaa"
     },
